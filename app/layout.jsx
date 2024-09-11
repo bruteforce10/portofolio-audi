@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
+import PageTransition from "@/components/PageTransition";
+import { StairTransition } from "@/components/StairTransition";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +20,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${JetBrainsMono.variable}`}>
         <Header />
-        {children}
+        <StairTransition />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
